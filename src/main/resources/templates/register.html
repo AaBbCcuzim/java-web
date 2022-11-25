@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" th:href="@{~/css/register.css}">
+		<link rel="shortcut icon" href="../resources/favicon.ico" th:href="@{/static/favicon.ico}"/>
+
+	</head>
+	<body>
+		<div id="app" class="whole">
+			<h2>注册成为用户</h2>
+			<div class="b">
+				<span> 账户：</span><input :class=accountstyle v-model="account" type="text" @focus="block1" placeholder="请输入新的用户名" />
+			</div>
+			<div class="error">{{accounterror}}</div>
+			<div class="b">
+				<span>密码：</span> <input :class=passwordstyle v-model="password" type="password" @focus="block2" placeholder="请输入密码"/>
+			</div>
+			<div class="error">{{passworderror}}</div>
+			<div class="a">
+			<span>确认密码：</span>	<input :class=password2style v-model="password2" type="password" @focus="block3" placeholder="请输入密码"/>
+			</div>
+			<div class="error">{{passworderror2}}</div>
+			<div class="b">
+			 	<span>昵称：</span><input :class=idstyle v-model="id" @focus="block4" placeholder="输入昵称"/>
+			</div>
+			<div class="error">{{iderror}}</div>
+			<div>
+				<button class="submit1" @click="register">注&nbsp册</button>
+			</div>
+		</div>
+	</body>
+	<script src="./js/vue.js"></script>
+	<script src="./js/axios.min.js"></script>
+	<script src="./js/const.js"></script>
+	<script src="./js/register.js"></script>
+	<script>
+		var vue =new Vue(config)
+	</script>	
+</html>
