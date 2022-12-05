@@ -5,10 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-	<link rel="shortcut icon" href="../resources/favicon.ico" th:href="@{/static/favicon.ico}"/>
 	<link rel="stylesheet" type="text/css" th:href="@{~/css/index.css}">
 	<link rel="stylesheet" type="text/css" th:href="@{~/css/iconfont.css}">
-	
 </head>
 <body>
 	<div id="app">
@@ -18,7 +16,7 @@
 			</h2>
 			<div class="user">
 				<div class="main_div">
-				  <button>{{this.id}}</button>
+				  <button @click="person">{{this.id}}</button>
 				</div>
 			</div>
 			<div class="nav">
@@ -27,122 +25,131 @@
 				<button @click="register">注册</button>
 			</div>
 		</div>
-		<div class="menu-box">
-			<div class="menu">
-				<!-- 侧边栏的标题 开始-->
-				<div class="menu-title">
-					<h2>目录</h2>
-				</div>
-				<!-- 侧边栏的标题 结束-->
-				<!-- 每一项导航 -->
-				<div class="menu-item ">
-					<input type="checkbox" id="menu-item1">
-					<label for="menu-item1">
-						<i class="menu-item-icon iconfont icon-a-01-shujuzhongxin"></i>
-						<span>高等数学</span>
-						<i class="menu-item-last iconfont icon-down"></i>
-					</label>
-					<div class="menu-content">
-						<span>第一章</span>
-						<span>第二章</span>
-						<span>第三章</span>
-						<span>第四章</span>
-						<span>第五章</span>
-						<span>第六章</span>
-						<span>第七章</span>
-						<span>第八章</span>
-						<span>第九章</span>	
+		<div class="bkground">
+			<h1>欢迎</h1>
+			<h2>{{this.id}}</h2>
+		</div>
+		<div class="group">
+		  <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+		  <input placeholder="Search" type="search" class="input">
+		</div>
+		<table>
+			<tr>
+				<td>
+					<div class="card">
+						<div class="card-details">
+							<p class="text-title">概率论与数理统计</p>
+							<p class="text-body"></p>
+						</div>
+						<button class="card-button" @click="book1">阅览</button>
 					</div>
-				</div>
-
-				<div class="menu-item">
-					<input type="checkbox" id="menu-item2">
-					<label for="menu-item2">
-						<i class="menu-item-icon iconfont icon-a-02-kechengguanli"></i>
-						<span >java课程设计</span>
-						<i class="menu-item-last iconfont icon-down"></i>
-					</label>
-					<div class="menu-content">
-						<span>第一章</span>
-						<span>第二章</span>
-						<span>第三章</span>
-						<span>第四章</span>
-						<span>第五章</span>
-						<span>第六章</span>
-						<span>第七章</span>
-						<span>第八章</span>
-						<span>第九章</span>	
+				</td>
+				<td>
+					<div class="card">
+						<div class="card-details">
+							<p class="text-title">高等数学</p>
+							<p class="text-body"></p>
+						</div>
+						<button class="card-button">阅览</button>
 					</div>
-				</div>
-
-				<div class="menu-item">
-					<input type="checkbox" id="menu-item3">
-					<label for="menu-item3">
-						<i class="menu-item-icon iconfont icon-a-04-zixunfabu"></i>
-						<span >数据结构</span>
-						<i class="menu-item-last iconfont icon-down"></i>
-					</label>
-					<div class="menu-content">
-						<span>第一章</span>
-						<span>第二章</span>
-						<span>第三章</span>
-						<span>第四章</span>
-						<span>第五章</span>
-						<span>第六章</span>
-						<span>第七章</span>
-						<span>第八章</span>
-						<span>第九章</span>	
+				</td>
+				<td>
+					<div class="card">
+						<div class="card-details">
+							<p class="text-title">数据库系统概论</p>
+							<p class="text-body"></p>
+						</div>
+						<button class="card-button">阅览</button>
 					</div>
-				</div>
-
-				<div class="menu-item">
-					<input type="checkbox" id="menu-item4">
-					<label for="menu-item4">
-						<i class="menu-item-icon iconfont icon-a-01-shujuzhongxin"></i>
-						<span >数据库</span>
-						<i class="menu-item-last iconfont icon-down"></i>
-					</label>
-					<div class="menu-content">
-						<span>第一章</span>
-						<span>第二章</span>
-						<span>第三章</span>
-						<span>第四章</span>
-						<span>第五章</span>
-						<span>第六章</span>
-						<span>第七章</span>
-						<span>第八章</span>
-						<span>第九章</span>	
+				</td>
+				<td>
+					<div class="card">
+						<div class="card-details">
+							<p class="text-title">java</p>
+							<p class="text-body"></p>
+						</div>
+						<button class="card-button">阅览</button>
 					</div>
-				</div>
-            </div>
-        </div>
-        <div id="main" class="content wrapper" >
-            <h1>机器学习</h1>      
-			<p>
-				机器学习是人工智能 (AI) 和计算机科学的分支，专注于使用数据和算法来模仿人类学习的方式，逐渐提高其准确性。
-			</p>
-			<hr/>
-			<p>
-				IBM 拥有丰富的机器学习历史。 业界广泛认为，Arthur Samuel 在有关跳棋的研究(PDF, 481 KB)（链接位于 IBM 之外）中创造了“机器学习”这个词。 自称跳棋大师的 Robert Nealey 于 1962 年与 IBM 7094 计算机对弈，结果输给了计算机。 与机器学习今天的成就相比，这看似微不足道，但它被认为是人工智能领域的一个重大里程碑。 在接下来的几十年里，存储和处理能力方面的技术突飞猛进，出现了我们现在所知道并喜爱的一系列创新产品，如 Netflix 的推荐引擎或自动驾驶汽车。
-			</p>
-			<hr/>
-			<p>
-				机器学习是不断成长的数据科学领域的重要组成部分。 通过使用统计方法，对算法进行训练，以进行分类或预测，揭示数据挖掘项目中的关键洞察。 然后，这些洞察可推动应用和业务中的决策，有效影响关键增长指标。 随着大数据的持续扩大和增长，数据科学家的市场需求也水涨船高，要求他们协助确定最相关的业务问题，并随后提供数据以获得答案。
-			</p>
-			<hr/>
-			<p>
-				由于深度学习和机器学习这两个术语往往可互换使用，因此必须注两者之间的细微差别。 机器学习、深度学习和神经网络都是人工智能的子领域。 但是，深度学习实际上是机器学习的一个子领域，而神经网络则是深度学习的一个子领域。
-			</p>
-			<hr/>
-			<p>
-				深度学习和机器学习的不同之处在于每个算法如何学习。 深度学习可以自动执行过程中的大部分特征提取，消除某些必需的人工干预，并能够使用更大的数据集。 可将深度学习视为“可扩展的机器学习”，就如 Lex Fridman 在这个 MIT 讲座 (00:30) 中 (链接位于 IBM 外部）所述的那样。 常规的机器学习，或叫做“非深度”机器学习，更依赖于人工干预进行学习。 人类专家确定一组特征，以了解数据输入之间的差异，通常需要更为结构化的数据以进行学习。
-				
-			</p>
-			<hr/>
-			<p>
-				“深度”机器学习则可以利用标签化的数据集，也称为监督式学习，以确定算法，但不一定必须使用标签化的数据集。 它可以原始格式（例如文本、图像）采集非结构化数据，并且可以自动确定区分不同类别数据的特征集。 与机器学习不同，它不需要人工干预数据的处理，使我们能够以更有趣的方式扩展机器学习。 深度学习和神经网络目前的成就，主要归功于计算机视觉、自然语言处理和语音识别等领域的突飞猛进。	
-			</p>
-        </div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="card">
+						<div class="card-details">
+							<p class="text-title">计算机网络</p>
+							<p class="text-body"></p>
+						</div>
+						<button class="card-button">阅览</button>
+					</div>
+				</td>
+				<td>
+					<div class="card">
+						<div class="card-details">
+							<p class="text-title">机器学习</p>
+							<p class="text-body"></p>
+						</div>
+						<button class="card-button">阅览</button>
+					</div>
+				</td>
+				<td>
+					<div class="card">
+						<div class="card-details">
+							<p class="text-title">c</p>
+							<p class="text-body"></p>
+						</div>
+						<button class="card-button">阅览</button>
+					</div>
+				</td>
+				<td>
+					<div class="card">
+						<div class="card-details">
+							<p class="text-title">数据结构</p>
+							<p class="text-body"></p>
+						</div>
+						<button class="card-button">阅览</button>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="card">
+						<div class="card-details">
+							<p class="text-title">敬请期待</p>
+							<p class="text-body"></p>
+						</div>
+						<button class="card-button">阅览</button>
+					</div>
+				</td>
+				<td>
+					<div class="card">
+						<div class="card-details">
+							<p class="text-title">敬请期待</p>
+							<p class="text-body"></p>
+						</div>
+						<button class="card-button">阅览</button>
+					</div>
+				</td>
+				<td>
+					<div class="card">
+						<div class="card-details">
+							<p class="text-title">敬请期待</p>
+							<p class="text-body"></p>
+						</div>
+						<button class="card-button">阅览</button>
+					</div>
+				</td>
+				<td>
+					<div class="card">
+						<div class="card-details">
+							<p class="text-title">敬请期待</p>
+							<p class="text-body"></p>
+						</div>
+						<button class="card-button">阅览</button>
+					</div>
+				</td>
+			</tr>
+		</table>
+		
     </div>   
 </body>
 <script src="./js/vue.js"></script>

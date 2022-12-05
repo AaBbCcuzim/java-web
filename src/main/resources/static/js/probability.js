@@ -17,9 +17,21 @@ var config={
 			"person":function(){
 				window.location.href=severUrl+"/personinf"
 			},
-			"book1":function(){
-				window.location.href=severUrl+"/probabilityindex"
-			}
+			"n11":function(){
+				window.location.href=severUrl+"/probability1.1"
+			},
+			"n12":function(){
+				window.location.href=severUrl+"/probability1.2"
+			},
+			"n13":function(){
+				window.location.href=severUrl+"/probability1.3"
+			},
+			"n14":function(){
+				window.location.href=severUrl+"/probability1.4"
+			},
+			"n15":function(){
+				window.location.href=severUrl+"/probability1.5"
+			},
         },
 		"mounted":function(){
 			var myCookie = document.cookie.replace(/(?:(?:^|.*;\s*)sdw2021327\s*\=\s*([^;]*).*$)|^.*$/, "$1")

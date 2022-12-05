@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+	<link rel="stylesheet" type="text/css" th:href="@{~/css/course.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{~/css/iconfont.css}">
+	
+</head>
+<body>
+	<div id="app">
+		<div class="header">
+			<h2>
+				<label>卷咖</label>
+			</h2>
+			<div class="user">
+				<div class="main_div">
+				  <button @click="person">{{this.id}}</button>
+				</div>
+			</div>
+			<div class="nav">
+				<button @click="course">课程</button>
+				<button @click="login">登录</button>
+				<button @click="register">注册</button>
+			</div>
+		</div>
+		<div class="menu-box">
+			<div class="menu">
+				<!-- 侧边栏的标题 开始-->
+				<div class="menu-title">
+					<h2>目录</h2>
+				</div>
+				<!-- 侧边栏的标题 结束-->
+				<!-- 每一项导航 -->
+				<div class="menu-item ">
+					<input type="checkbox" id="menu-item1">
+					<label for="menu-item1">
+						<i class="menu-item-icon iconfont icon-a-01-shujuzhongxin"></i>
+						<span>第一章</span>
+						<i class="menu-item-last iconfont icon-down"></i>
+					</label>
+					<div class="menu-content">
+						<span @click="n11">第一节</span>
+						<span @click="n12">第二节</span>
+						<span @click="n13">第三节</span>
+						<span @click="n14">第四节</span>
+						<span @click="n15">第五节</span>
+						<span>第六节</span>
+						<span>第七节</span>
+						<span>章末总结</span>
+					</div>
+				</div>
+
+				<div class="menu-item">
+					<input type="checkbox" id="menu-item2">
+					<label for="menu-item2">
+						<i class="menu-item-icon iconfont icon-a-02-kechengguanli"></i>
+						<span >第二章</span>
+						<i class="menu-item-last iconfont icon-down"></i>
+					</label>
+					<div class="menu-content">
+						<span>第一节</span>
+						<span>第二节</span>
+						<span>第三节</span>
+						<span>第四节</span>
+						<span>第五节</span>
+						<span>第六节</span>
+						<span>第七节</span>
+						<span>章末总结</span>
+					</div>
+				</div>
+
+				<div class="menu-item">
+					<input type="checkbox" id="menu-item3">
+					<label for="menu-item3">
+						<i class="menu-item-icon iconfont icon-a-04-zixunfabu"></i>
+						<span >第三章</span>
+						<i class="menu-item-last iconfont icon-down"></i>
+					</label>
+					<div class="menu-content">
+						<span>第一节</span>
+						<span>第二节</span>
+						<span>第三节</span>
+						<span>第四节</span>
+						<span>第五节</span>
+						<span>第六节</span>
+						<span>第七节</span>
+						<span>章末总结</span>
+					</div>
+				</div>
+
+				<div class="menu-item">
+					<input type="checkbox" id="menu-item4">
+					<label for="menu-item4">
+						<i class="menu-item-icon iconfont icon-a-01-shujuzhongxin"></i>
+						<span >第四章</span>
+						<i class="menu-item-last iconfont icon-down"></i>
+					</label>
+					<div class="menu-content">
+						<span>第一节</span>
+						<span>第二节</span>
+						<span>第三节</span>
+						<span>第四节</span>
+						<span>第五节</span>
+						<span>第六节</span>
+						<span>第七节</span>
+						<span>章末总结</span>
+					</div>
+				</div>
+            </div>
+        </div>
+        <div id="main" class="content wrapper" >
+            <h1>古典概型与几何概型</h1>      
+			<hr>
+            <h2>1.频率与概率</h2>
+			<p>
+				①频率的稳定性：大量经验表明，当试验的次数相当大时，频率总是稳定于某一常数附近，即它将以某一常数为中心作微小的摆动，而发生较大偏离的可能性很小．这一性质称为频率的稳定性．
+			</p>
+            <p>
+			    ②概率的统计定义:在大量重复试验中，若事件发生的频率稳定地在某一常数p的附近摆动，则称该常数p为事件A发生的概率，并记事件A的概率为P(A），即P(A）=p
+            </p>
+            <hr>
+			<p>
+				<h2>2.古典概型</h2>
+			</p>
+			<p>
+            ①概率的古典定义：设试验结果共有n个基本事件w1,w2,w3,w4…wn,而且这些事件发生的可能性相等．事件A由其中的m个基本事件组成，则事件A的概率为
+			</p>
+			<p>
+                P(A)=事件A包含的基本事件数（m）/基本事件总数（n）
+			</p>
+			<p>
+                 ②古典概型的特点：
+			</p>	 
+			<p>
+				1）	试验的样本空间中样本点只有有限个，即基本事件的总数有限（有限性）
+			</p>
+			<p>
+                2）	在每一次的实验中，每个基本事件发生的可能性相等（等可能性）
+			</p>
+            <hr>
+            <h2>3.几何概型</h2>
+			<p>
+				①引入原因：古典概型的概率定义只适用于试验的可能结果是有限个，且具有等可能性的情况，因此有一定的局限性．在实际问题中，我们经常会遇到样本空间中的样本点有无穷多的情况，若等可能的条件依旧成立，仿照古典概型的概率计算公式，就得到了几何概型的定义及其计算方法。
+			</p>
+            <p>②几何概型：如果试验E的可能结果可以几何地表示为某区域中的一个点（区域可以是一维的、二维的、三维的……），并且点落在 中某区域的概率与 的测度（长度,面积,体积等）成正比，而与A的位置及形状无关，则随机点落在区域的概率为
+            </p>
+            <p>
+            P(A)=A的测度/ 的测度=mA/m 
+            称p(A)为几何概率。
+            </p>
+        </div>
+    </div>   
+</body>
+<script src="./js/vue.js"></script>
+<script src="./js/axios.min.js"></script>
+<script src="./js/const.js"></script>
+<script src="./js/probability.js"></script>
+<script type="text/javascript" color="54,54,54" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+<script>
+    var vue =new Vue(config)
+</script>
+</html>

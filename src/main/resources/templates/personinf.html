@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+	<link rel="stylesheet" type="text/css" th:href="@{~/css/personinf.css}">
+</head>
+<body>
+	<div id="app">
+		<div class="header">
+			<h2>
+				<label>卷咖</label>
+			</h2>
+			<div class="user">
+				<div class="main_div">
+				  <button @click="person">{{this.id}}</button>
+				</div>
+			</div>
+			<div class="nav">
+				<button @click="course">课程</button>
+				<button @click="login">登录</button>
+				<button @click="register">注册</button>
+			</div>
+		</div>
+			<div class="card">
+				<div class="card-img"></div>
+				  <div class="card-info">
+					<h1>{{this.id}}</h1>
+					<p class="text-body">账号：{{this.account}}</p>
+					<p class="text-body">密码：{{this.password}}</p>
+					<p class="text-body">邮箱：{{this.email}}</p>
+					<p class="text-body">Year：{{this.year}}</p>
+					<p class="text-body">Month：{{this.month}}</p>
+					<p class="text-body">Day：{{this.day}}</p>
+					<p class="text-body">学校：{{this.school}}</p>
+					<p class="text-body">电话：{{this.phone}}</p>
+					<p class="text-title">个人信息</p>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="./js/vue.js"></script>
+<script src="./js/axios.min.js"></script>
+<script src="./js/const.js"></script>
+<script src="./js/personinf.js"></script>
+<script type="text/javascript" color="54,54,54" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+<script>
+    var vue =new Vue(config)
+</script>
+</html>

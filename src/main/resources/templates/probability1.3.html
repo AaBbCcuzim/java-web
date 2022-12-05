@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+	<link rel="stylesheet" type="text/css" th:href="@{~/css/course.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{~/css/iconfont.css}">
+	
+</head>
+<body>
+	<div id="app">
+		<div class="header">
+			<h2>
+				<label>卷咖</label>
+			</h2>
+			<div class="user">
+				<div class="main_div">
+				  <button @click="person">{{this.id}}</button>
+				</div>
+			</div>
+			<div class="nav">
+				<button @click="course">课程</button>
+				<button @click="login">登录</button>
+				<button @click="register">注册</button>
+			</div>
+		</div>
+		<div class="menu-box">
+			<div class="menu">
+				<!-- 侧边栏的标题 开始-->
+				<div class="menu-title">
+					<h2>目录</h2>
+				</div>
+				<!-- 侧边栏的标题 结束-->
+				<!-- 每一项导航 -->
+				<div class="menu-item ">
+					<input type="checkbox" id="menu-item1">
+					<label for="menu-item1">
+						<i class="menu-item-icon iconfont icon-a-01-shujuzhongxin"></i>
+						<span>第一章</span>
+						<i class="menu-item-last iconfont icon-down"></i>
+					</label>
+					<div class="menu-content">
+						<span @click="n11">第一节</span>
+						<span @click="n12">第二节</span>
+						<span @click="n13">第三节</span>
+						<span @click="n14">第四节</span>
+						<span @click="n15">第五节</span>
+						<span>第六节</span>
+						<span>第七节</span>
+						<span>章末总结</span>
+					</div>
+				</div>
+
+				<div class="menu-item">
+					<input type="checkbox" id="menu-item2">
+					<label for="menu-item2">
+						<i class="menu-item-icon iconfont icon-a-02-kechengguanli"></i>
+						<span >第二章</span>
+						<i class="menu-item-last iconfont icon-down"></i>
+					</label>
+					<div class="menu-content">
+						<span>第一节</span>
+						<span>第二节</span>
+						<span>第三节</span>
+						<span>第四节</span>
+						<span>第五节</span>
+						<span>第六节</span>
+						<span>第七节</span>
+						<span>章末总结</span>
+					</div>
+				</div>
+
+				<div class="menu-item">
+					<input type="checkbox" id="menu-item3">
+					<label for="menu-item3">
+						<i class="menu-item-icon iconfont icon-a-04-zixunfabu"></i>
+						<span >第三章</span>
+						<i class="menu-item-last iconfont icon-down"></i>
+					</label>
+					<div class="menu-content">
+						<span>第一节</span>
+						<span>第二节</span>
+						<span>第三节</span>
+						<span>第四节</span>
+						<span>第五节</span>
+						<span>第六节</span>
+						<span>第七节</span>
+						<span>章末总结</span>
+					</div>
+				</div>
+
+				<div class="menu-item">
+					<input type="checkbox" id="menu-item4">
+					<label for="menu-item4">
+						<i class="menu-item-icon iconfont icon-a-01-shujuzhongxin"></i>
+						<span >第四章</span>
+						<i class="menu-item-last iconfont icon-down"></i>
+					</label>
+					<div class="menu-content">
+						<span>第一节</span>
+						<span>第二节</span>
+						<span>第三节</span>
+						<span>第四节</span>
+						<span>第五节</span>
+						<span>第六节</span>
+						<span>第七节</span>
+						<span>章末总结</span>
+					</div>
+				</div>
+            </div>
+        </div>
+        <div id="main" class="content wrapper" >
+            <h1>概率的公理化定义及其性质</h1>      
+			<hr>
+			<p>
+				知识储备：主观概率：事件的概率是人们根据经验对该事件发生的可能性所给出的个人信念，这样给出的概率称为主观概率。
+			</p>
+			<h2>
+                1.	事件域
+            </h2>
+			<p>
+				①一维博雷尔ǿ域：在实数集合R中，由一切形如[a,b）的有界左闭右开的开区间构成的集类所产生的ǿ域称为一维博雷尔ǿ域，记该ǿ域中的任一元素为一维博雷尔点集。
+			</p>
+            <hr>
+	        <h2>2.概率的公理化定义</h2>
+			<p>
+                ①概率的公理化定义:假定 是一个样本空间是 上的一个事件域,若对于中的任何一个事件A,都有一实数P(A )与之对应,并且满足下列三条公理:
+			</p>
+            <p>
+            公理1	非负性:对于任何一个事件A，P（A）>=0;
+			</p>
+            <p>
+				公理2	规范性
+            </p>
+			<hr>
+				<h2>3.	概率的性质及运算法则</h2>
+			<p>
+                ①P(Φ)=0;
+			</p>
+            <p>
+                ②(有限可加性)若事件, A1,A2,A3,A4……,两两互不相容,则
+		        P(A1+A2+A3+……)=P(A1)+P(A2)+P(A3)……
+            </p>
+            <p>
+                ③可减性
+            </p>
+            <p>
+                ④单调性
+            </p>
+            
+        </div>
+    </div>   
+</body>
+<script src="./js/vue.js"></script>
+<script src="./js/axios.min.js"></script>
+<script src="./js/const.js"></script>
+<script src="./js/probability.js"></script>
+<script type="text/javascript" color="54,54,54" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+<script>
+    var vue =new Vue(config)
+</script>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+	<link rel="stylesheet" type="text/css" th:href="@{~/css/course.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{~/css/iconfont.css}">
+	
+</head>
+<body>
+	<div id="app">
+		<div class="header">
+			<h2>
+				<label>卷咖</label>
+			</h2>
+			<div class="user">
+				<div class="main_div">
+				  <button @click="person">{{this.id}}</button>
+				</div>
+			</div>
+			<div class="nav">
+				<button @click="course">课程</button>
+				<button @click="login">登录</button>
+				<button @click="register">注册</button>
+			</div>
+		</div>
+		<div class="menu-box">
+			<div class="menu">
+				<!-- 侧边栏的标题 开始-->
+				<div class="menu-title">
+					<h2>目录</h2>
+				</div>
+				<!-- 侧边栏的标题 结束-->
+				<!-- 每一项导航 -->
+				<div class="menu-item ">
+					<input type="checkbox" id="menu-item1">
+					<label for="menu-item1">
+						<i class="menu-item-icon iconfont icon-a-01-shujuzhongxin"></i>
+						<span>第一章</span>
+						<i class="menu-item-last iconfont icon-down"></i>
+					</label>
+					<div class="menu-content">
+						<span @click="n11">第一节</span>
+						<span @click="n12">第二节</span>
+						<span @click="n13">第三节</span>
+						<span @click="n14">第四节</span>
+						<span @click="n15">第五节</span>
+						<span>第六节</span>
+						<span>第七节</span>
+						<span>章末总结</span>
+					</div>
+				</div>
+
+				<div class="menu-item">
+					<input type="checkbox" id="menu-item2">
+					<label for="menu-item2">
+						<i class="menu-item-icon iconfont icon-a-02-kechengguanli"></i>
+						<span >第二章</span>
+						<i class="menu-item-last iconfont icon-down"></i>
+					</label>
+					<div class="menu-content">
+						<span>第一节</span>
+						<span>第二节</span>
+						<span>第三节</span>
+						<span>第四节</span>
+						<span>第五节</span>
+						<span>第六节</span>
+						<span>第七节</span>
+						<span>章末总结</span>
+					</div>
+				</div>
+
+				<div class="menu-item">
+					<input type="checkbox" id="menu-item3">
+					<label for="menu-item3">
+						<i class="menu-item-icon iconfont icon-a-04-zixunfabu"></i>
+						<span >第三章</span>
+						<i class="menu-item-last iconfont icon-down"></i>
+					</label>
+					<div class="menu-content">
+						<span>第一节</span>
+						<span>第二节</span>
+						<span>第三节</span>
+						<span>第四节</span>
+						<span>第五节</span>
+						<span>第六节</span>
+						<span>第七节</span>
+						<span>章末总结</span>
+					</div>
+				</div>
+
+				<div class="menu-item">
+					<input type="checkbox" id="menu-item4">
+					<label for="menu-item4">
+						<i class="menu-item-icon iconfont icon-a-01-shujuzhongxin"></i>
+						<span >第四章</span>
+						<i class="menu-item-last iconfont icon-down"></i>
+					</label>
+					<div class="menu-content">
+						<span>第一节</span>
+						<span>第二节</span>
+						<span>第三节</span>
+						<span>第四节</span>
+						<span>第五节</span>
+						<span>第六节</span>
+						<span>第七节</span>
+						<span>章末总结</span>
+					</div>
+				</div>
+            </div>
+        </div>
+        <div id="main" class="content wrapper" >
+            <h1>伯努利概型</h1>      
+			<hr>
+            <h2>1.试验的独立性</h2>
+			<p>
+				①两个试验相互独立：设有两个试验0和E2,假如试验El的任一结果（事件）与试验 E2的任一结果（事件）都相互独立，则称这两个试验相互独立。
+			</p>
+			
+			<p>
+				② n重独立试验:例如抛掷一枚硬币（试验E1）与抛掷一颗骰子（试验E2）是相互独立的试验,类似地可以定义n个试验E1,E2,E3……的相互独立性：如果试验E1的任一结果、试 验E2的任一结果……试验En的任一结果都是相互独立的个事件，则称试验E1, E2,E3……相互独立，
+			</p>
+	
+			<p>
+                特殊：如果这n个独立试验还是相同的，则称其为n重独立重复试验．
+			</p>
+				
+			<p>
+			
+                ③ n重伯努利试验:如果试验E的可能结果为两个：则称试验E为伯努利试验；若将E重复进行n次，且这n次试验相互独立，则称为n重伯努利试验。
+			</p>
+		
+        </div>
+    </div>   
+</body>
+<script src="./js/vue.js"></script>
+<script src="./js/axios.min.js"></script>
+<script src="./js/const.js"></script>
+<script src="./js/probability.js"></script>
+<script type="text/javascript" color="54,54,54" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+<script>
+    var vue =new Vue(config)
+</script>
+</html>

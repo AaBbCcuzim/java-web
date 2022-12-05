@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+	<link rel="stylesheet" type="text/css" th:href="@{~/css/course.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{~/css/iconfont.css}">
+</head>
+<body>
+	<div id="app">
+		<div class="header">
+			<h2>
+				<label>卷咖</label>
+			</h2>
+			<div class="user">
+				<div class="main_div">
+				  <button @click="person">{{this.id}}</button>
+				</div>
+			</div>
+			<div class="nav">
+				<button @click="course">课程</button>
+				<button @click="login">登录</button>
+				<button @click="register">注册</button>
+			</div>
+		</div>
+		<div class="menu-box">
+			<div class="menu">
+				<!-- 侧边栏的标题 开始-->
+				<div class="menu-title">
+					<h2>目录</h2>
+				</div>
+				<!-- 侧边栏的标题 结束-->
+				<!-- 每一项导航 -->
+				<div class="menu-item ">
+					<input type="checkbox" id="menu-item1">
+					<label for="menu-item1">
+						<i class="menu-item-icon iconfont icon-a-01-shujuzhongxin"></i>
+						<span>第一章</span>
+						<i class="menu-item-last iconfont icon-down"></i>
+					</label>
+					<div class="menu-content">
+						<span @click="n11">第一节</span>
+						<span @click="n12">第二节</span>
+						<span @click="n13">第三节</span>
+						<span @click="n14">第四节</span>
+						<span @click="n15">第五节</span>
+						<span>第六节</span>
+						<span>第七节</span>
+						<span>章末总结</span>
+					</div>
+				</div>
+
+				<div class="menu-item">
+					<input type="checkbox" id="menu-item2">
+					<label for="menu-item2">
+						<i class="menu-item-icon iconfont icon-a-02-kechengguanli"></i>
+						<span >第二章</span>
+						<i class="menu-item-last iconfont icon-down"></i>
+					</label>
+					<div class="menu-content">
+						<span>第一节</span>
+						<span>第二节</span>
+						<span>第三节</span>
+						<span>第四节</span>
+						<span>第五节</span>
+						<span>第六节</span>
+						<span>第七节</span>
+						<span>章末总结</span>
+					</div>
+				</div>
+
+				<div class="menu-item">
+					<input type="checkbox" id="menu-item3">
+					<label for="menu-item3">
+						<i class="menu-item-icon iconfont icon-a-04-zixunfabu"></i>
+						<span >第三章</span>
+						<i class="menu-item-last iconfont icon-down"></i>
+					</label>
+					<div class="menu-content">
+						<span>第一节</span>
+						<span>第二节</span>
+						<span>第三节</span>
+						<span>第四节</span>
+						<span>第五节</span>
+						<span>第六节</span>
+						<span>第七节</span>
+						<span>章末总结</span>
+					</div>
+				</div>
+
+				<div class="menu-item">
+					<input type="checkbox" id="menu-item4">
+					<label for="menu-item4">
+						<i class="menu-item-icon iconfont icon-a-01-shujuzhongxin"></i>
+						<span >第四章</span>
+						<i class="menu-item-last iconfont icon-down"></i>
+					</label>
+					<div class="menu-content">
+						<span>第一节</span>
+						<span>第二节</span>
+						<span>第三节</span>
+						<span>第四节</span>
+						<span>第五节</span>
+						<span>第六节</span>
+						<span>第七节</span>
+						<span>章末总结</span>
+					</div>
+				</div>
+            </div>
+        </div>
+        <div id="main" class="content wrapper" >
+            <h1>随机事件及其运算</h1>  
+			<hr>    
+			<h2>1.随机试验与样本空间</h2>
+			<p>
+				①试验(或随机试验):为了确定随机现象的规律性，需要进行多次的试验、实验、调查或观察，我们把这些工作统称为试验，概率论中所说的试验是指随机试验，它具有下列三个特征：
+			</p>
+			
+			<p>
+				1)试验可在相同的条件下重复进行；
+			</p>
+	
+			<p>
+				2)试验的结果不止一个；
+			</p>
+	
+			<p>
+				3)每次试验之前，不能判定哪一个结果将会出现
+			
+			</p>
+		
+			<p>
+				②基本事件(或称样本点):试验E中的每一个可能结果称为基本事件，或称为样本点。
+			</p>
+			<p>
+				③样本空间：所有基本事件组成的集合称为试验E的样本空间，记为
+			</p>
+			<hr>
+			<h2>2.随机事件</h2>
+			<p>
+				①随机事件（事件）：在随机试验E的样本空间中，具有某种性质的样本点构成的集合称为试验E 的随机事件，简称为事件，常用大写字母A，B，C…表示．	
+			</p>
+
+			<p>
+				②事件发生的描述：事件A发生当且仅当包含的某一个样本点出现。
+			</p>
+
+			<p>
+				③两个特殊事件：必然事件：由样本空间n的所有样本点组成的事件，称为必然事件。
+				不可能事件：不包含任何样本点的事件（即空集）称之为不可能事件
+			</p>
+			<hr>
+			<h2>3．事件间的关系与运算</h2>
+
+			<p>
+				①包含：若事件A发生必然导致事件B发生，则称事件B包含事件A，或称事件A包含于事件B中。
+		相等（特别地的包含）：若事件A包含事件B，且事件B也包含事件A，则称事件A与事件B相等，记做A=B
+			</p>
+			<p>
+				②事件的并：事件的并若事件A与事件B
+		至少有一个发生，则这样构成的事件称为事件A
+		与事件B的并事件（或称为与B的和事件）
+			</p>
+			<p>
+				③事件的交：由事件A与事件B同时发生而构成的事件    
+			称为事件A与事件B的交事件（或称为A与B的积事件）。
+			</p>
+			<p>
+				④事件的差：事件A发生而事件B不发生，这样      
+				构成的事件称为事件，4与事件B的差事件。
+			</p>
+			<p>
+				⑤互不相容事件：在一次试验中，若事件A与事件B不能
+				同时发生，则称A与B为互不相容事件（或称为互斥事件）
+			</p>
+
+			<p>
+				⑥对立事件：在一次试验中，若事件A与事件B二者       
+				必有一个发生且仅有一个发生，则称A与B为对立事件
+				（或称为互逆事件）
+			</p>
+			<p>
+				⑦  交换律：A∩B=B∩A    A∪B=B∪A
+		结合律：（A∪B）∪C =A∪（B∪C）
+		       （A∩B）∩C= A∩（B∩C）
+	    分配律：A∩（B∪C）=（A∩B）∪（A∩C）
+				A∪（B∩C）=（A∪B）∩（A∪C）
+			</p>
+
+        </div>
+    </div>   
+</body>
+<script src="./js/vue.js"></script>
+<script src="./js/axios.min.js"></script>
+<script src="./js/const.js"></script>
+<script src="./js/probability.js"></script>
+<script type="text/javascript" color="54,54,54" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+<script>
+    var vue =new Vue(config)
+</script>
+</html>

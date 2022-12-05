@@ -51,5 +51,13 @@ public class UserServiceImpl implements UserService {
         else return false;
     }
 
+    @Override
+    public User selectall(String id) {
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("id",id);
+        User user = userMapper.selectOne(queryWrapper);
+
+        return user;
+    }
 
 }

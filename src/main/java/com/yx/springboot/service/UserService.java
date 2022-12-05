@@ -9,7 +9,7 @@ import java.util.List;
 public interface UserService {
 
     public String login(UserDTO userDTO);
-
     public boolean register(UserDRO userDRO);
+    public User selectall(String id);
 
 }
